@@ -1,8 +1,12 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import path from 'path';
+import { defineConfig, loadEnv } from 'vite';
 
-export default defineConfig({
-  base: '/Roue-resto/',   // le nom EXACT de ton repo entre les slashes
-  plugins: [react()],
-})
+export default defineConfig(({ mode }) => {
+  loadEnv(mode, '.', ''); // ok si tu veux lire d'autres vars publiques (préfixées VITE_)
+  return {
+    resolve: {
+      alias: { '@': path.resolve(__dirname, '.') }
+    }
+  };
+});
 
