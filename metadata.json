@@ -1,0 +1,5 @@
+{
+  "name": "Roue des Restaurants",
+  "description": "Une roue de la fortune pour choisir au hasard un restaurant parmi une liste. Appuyez sur la barre d'espace pour la faire tourner et voir où vous allez manger aujourd'hui!",
+  "requestFramePermissions": []
+}
